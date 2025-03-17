@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Disciplinas</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Nome</th>
+                <th>Carga Horária</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="disciplina: ${disciplinas}">
+                <td th:text="${disciplina.codigo}" />
+                <td th:text="${disciplina.nome}" />
+                <td th:text="${@horarioViewHelper.format(disciplina.cargaHoraria)}" />
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

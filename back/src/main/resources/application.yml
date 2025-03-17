@@ -1,0 +1,17 @@
+spring:
+    application:
+        name: Cobaia
+
+    jpa:
+        database-platform: org.hibernate.dialect.H2Dialect
+        hibernate:
+            ddl-auto: update
+    
+    datasource:
+        url:  jdbc:h2:mem:cobaia
+        driver-class-name: org.h2.Driver
+        username: sa
+        password: sasa
+
+    thymeleaf:
+        prefix: classpath:/view/
